@@ -1,21 +1,24 @@
 import java.util.*;
-public class Frequency{
+class Palindrome {
     public static void main(String[] args) {
-        int count = 0;
-        System.out.println("Enter a string: "); 
+        System.out.println("Enter a string: ");
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        int n =str.length();
-        System.out.println("Enter the character to search: "); 
-        String ch = sc.nextLine();
-        for(int i=0; i<n; i++){
-            if(str.charAt(i)==ch.charAt(0)){
-                count++;
+        int n = str.length();
+        int j = n-1, flag=0;
+        for (int i=0; i<n/2; i++){
+            if(str.charAt(i)!=str.charAt(j)){
+                flag=1;
+                break;
             }
+            j--;
         }
-        System.out.println("Count is:"+count);
-
+        if(flag==1){
+            System.out.println("not palindrome");
+        }
+        else{
+            System.out.println("palindrome");
+        }
         sc.close();
-
     }
 }
