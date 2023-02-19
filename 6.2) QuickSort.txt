@@ -27,7 +27,7 @@ public class QuickSort{
   str[low]=str[right];
   str[right]= pivot;
   return right;
-  }
+ }
   
  void print(String[] a, int n){  
   System.out.println("\nPrinting: ");
@@ -46,6 +46,7 @@ public class QuickSort{
    a[i] = sc.next();
   }
   QuickSort obj = new QuickSort();
+  obj.print(a,n);
   obj.sort(a,0,n-1);
   obj.print(a,n);
   sc.close();
