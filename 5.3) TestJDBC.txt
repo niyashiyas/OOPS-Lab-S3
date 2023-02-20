@@ -2,7 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-public class TestJDBCSQL{
+public class TestJDBC{
  public static void main(String args[]){
   Statement stmt = null;
   Connection c = null;
