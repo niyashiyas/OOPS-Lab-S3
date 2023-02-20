@@ -16,8 +16,11 @@ public class TestJDBCSQL{
     while(rs.next()){
       int id = rs.getInt("id");
       String name = rs.getString("name");
-      System.out.pritnln("ID= "+id+"Name= "+name);
-      System.out.pritnln();
+      int age = rs.getInt("age");
+      String address = rs.getString("address");
+      float salary = rs.getInt("salary");
+      System.out.pritnln("ID= "+id+", Name= "+name+", Age= "+age+" ,Address= "+address+"Salary= "+salary);
+      System.out.pritnln(); 
     }
     rs.close();
     stmt.close();
